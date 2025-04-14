@@ -56,7 +56,30 @@ Aider 是一个强大的 AI 编码助手，可直接在终端或 IDE 中运行�
   ```bash
   python -m pip install -U aider-chat
   ```
+- These one-liners will install aider, along with python 3.12 if needed. They are based on the uv installers.
+
+Windows
+
+```
+powershell -ExecutionPolicy ByPass -c "irm https://aider.chat/install.ps1 | iex"
+```
+
+Mac & Linux
+
+Use curl to download the script and execute it with sh:
+```bash
+curl -LsSf https://aider.chat/install.sh | sh
+```
+
+If your system doesn’t have curl, you can use wget:
+
+``` bash
+wget -qO- https://aider.chat/install.sh | sh
+```
+
 - 确保 Python 版本在 3.8 至 3.13 之间。更多安装详情请参考 [Aider 安装指南](https://aider.chat/docs/install.html)。
+
+
 
 #### 2. 获取 OpenRouter API 密钥
 OpenRouter 提供对多种 LLMs 的访问，您需要一个 API 密钥来连接 Aider：
