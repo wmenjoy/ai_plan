@@ -130,8 +130,8 @@ OpenRouter 提供对多种 LLMs 的访问，您需要一个 API 密钥来连接 
  ```
  在你的项目根目录或用户主目录下创建一个名为 .aider.conf.yml 的 YAML 文件，并添加以下内容
  ```
- openroute-api-key: sk-or-v1-...
- openroute-api-base: [https://openrouter.ai/api/v1](https://openrouter.ai/api/v1)
+ openai-api-key: sk-or-v1-...
+ openai-api-base: https://openrouter.ai/api/v1
  model: openrouter/openrouter/optimus-alpha # 示例模型
  # 可以添加其他 Aider 配置项
  # auto-commit: true
