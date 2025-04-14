@@ -1,4 +1,3 @@
-
 # Aider与OpenRouter开发项目手册
 
 ## 关键要点
@@ -8,8 +7,13 @@
 - **设置简单**：需要安装 Aider、获取 OpenRouter API 密钥并进行基本配置。
 - **需注意**：模型选择和令牌成本可能影响使用体验，建议根据项目需求调整。
 
-### 什么是 Aider 和 OpenRouter？
-Aider 是一个在终端或集成开发环境（IDE）中运行的工具，通过识别代码中的 AI 注释（如 `# AI!` 用于修改代码，`# AI?` 用于回答问题）来提供编码支持。OpenRouter 是一个平台，通过单一 API 访问多个 LLMs（如 Anthropic 的 Claude 或 DeepSeek 模型），并自动选择成本效益高且性能最佳的提供商。
+### 什么是 Aider?
+
+Aider 是一个命令行工具，充当 AI 结对程序员。它允许你直接在终端中与 GPT-3.5/GPT-4 (或其他兼容模型) 协同工作，请求代码更改、编写新功能、修复 Bug 或生成测试。Aider 的核心优势在于它能够理解你的本地代码库上下文，直接编辑本地文件，并与 Git 集成，自动提交有意义的变更。
+
+### 什么是 OpenRouter?
+
+OpenRouter 是一个 API 聚合器和路由器，它提供了一个统一的接口来访问来自不同提供商 (如 OpenAI, Anthropic, Google, Mistral AI, Meta 等) 的各种大型语言模型 (LLM)。用户可以通过一个 OpenRouter API Key 访问多种模型，通常具有更灵活的定价和模型选择。
 
 ### 如何开始？
 要使用 Aider 和 OpenRouter，您需要安装 Aider，获取 OpenRouter API 密钥，并配置环境。以下是基本步骤：
