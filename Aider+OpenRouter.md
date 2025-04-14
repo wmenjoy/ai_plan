@@ -1,5 +1,4 @@
 
-
 # Aider与OpenRouter开发项目手册
 
 ## 关键要点
@@ -117,7 +116,7 @@ OpenRouter 支持多个模型提供商，您可以控制 Aider 使用哪些提�
 启动 Aider 时，需指定 OpenRouter 模型，格式为 `openrouter/<provider>/<model>`。以下是一个示例命令：
 
 ```bash
-aider --dark-mode --pretty --cache-prompts --no-auto-commits --model openrouter/anthropic/claude-3.5-sonnet
+aider --dark-mode --pretty --cache-prompts --no-auto-commits --model openrouter/openrouter/optimus-alpha
 ```
 
 - **参数说明**：
@@ -125,7 +124,7 @@ aider --dark-mode --pretty --cache-prompts --no-auto-commits --model openrouter/
   - `--pretty`：优化输出格式。
   - `--cache-prompts`：启用模型支持的提示缓存。
   - `--no-auto-commits`：禁用自动提交，允许手动控制。
-  - `--model`：指定模型，如 `openrouter/anthropic/claude-3.5-sonnet`。
+  - `--model`：指定模型，如 `openrouter/openrouter/optimus-alpha`。
 
 - **列出可用模型**：
   要查看 OpenRouter 提供的模型列表，运行：
@@ -192,7 +191,7 @@ aider --dark-mode --pretty --cache-prompts --no-auto-commits --model openrouter/
    ```
 2. 启动 Aider：
    ```bash
-   aider --model openrouter/anthropic/claude-3.5-sonnet
+   aider --model openrouter/openrouter/optimus-alpha
    ```
 3. 添加文件：
    ```bash
@@ -258,11 +257,11 @@ aider --dark-mode --pretty --cache-prompts --no-auto-commits --model openrouter/
 #### 1. 使用 `.aider.conf.yml`
 您可以通过 `.aider.conf.yml` 文件预设模型和密钥。例如：
 ```yaml
-model: openrouter/anthropic/claude-3.5-sonnet
+model: openrouter/openrouter/optimus-alpha
 ```
 或为 DeepSeek 配置：
 ```yaml
-model: openrouter/deepseek/deepseek-chat
+model: openrouter/deepseek/deepseek-v3-base:free
 ```
 将文件放置在家目录或项目根目录。
 
