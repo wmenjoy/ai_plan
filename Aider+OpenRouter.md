@@ -122,6 +122,20 @@ OpenRouter 提供对多种 LLMs 的访问，您需要一个 API 密钥来连接 
   ```bash
   source ~/.zshrc
   ```
+ 此外还支持项目中的.env文件
+ ```
+ OPENROUTER_API_KEY=sk-or-v1-...
+ GEMINI_API_KEY=
+ DEEPSEEK_API_KEY=
+ ```
+ 在你的项目根目录或用户主目录下创建一个名为 .aider.conf.yml 的 YAML 文件，并添加以下内容
+ ```
+ openai-api-key: sk-or-v1-...
+ openai-api-base: [https://openrouter.ai/api/v1](https://openrouter.ai/api/v1)
+ model: openrouter/openrouter/optimus-alpha # 示例模型
+ # 可以添加其他 Aider 配置项
+ # auto-commit: true
+ ```
 
 #### 2. 配置提供商路由（可选）
 OpenRouter 支持多个模型提供商，您可以控制 Aider 使用哪些提供商。配置方法包括：
@@ -132,16 +146,16 @@ OpenRouter 支持多个模型提供商，您可以控制 Aider 使用哪些提�
 - **使用 `.aider.model.settings.yml` 文件**：
   在家目录或项目根目录创建 `.aider.model.settings.yml`，例如：
   ```yaml
-  - name: openrouter/anthropic/claude-3.7-sonnet
+  - name: openrouter/openrouter/optimus-alpha
     extra_params:
       extra_body:
         provider:
-          order: ["Anthropic", "Together"]
+          order: ["Stealth"]
           allow_fallbacks: false
           data_collection: "deny"
           require_parameters: true
   ```
-  此配置指定优先使用 Anthropic 和 Together 提供商，禁用回退，拒绝数据收集，并要求支持所有参数。更多详情请参考 [OpenRouter 提供商路由文档](https://openrouter.ai/docs/provider-routing)。
+  此配置指定优先使用 Stealth 提供商，禁用回退，拒绝数据收集，并要求支持所有参数。更多详情请参考 [OpenRouter 提供商路由文档](https://openrouter.ai/docs/provider-routing)。
 
 ### 使用方法
 
